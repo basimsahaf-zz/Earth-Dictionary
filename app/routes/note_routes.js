@@ -6,14 +6,16 @@ module.exports = function(app, db) {
 
   app.get('/notes/:id', (req, res) => {
     const id = req.params.id;
-    const details = { '_id': new ObjectID(id) };
-    db.collection('notes').findOne(details, (err, item) => {
-      if (err) {
-        res.send({'error':'An error has occurred'});
-      } else {
-        res.send(item);
-      }
-    });
+    const details = { key: "Stratosphere" };
+
+    /*collection.findOne({_id: doc_id}, function(err, document) {
+      console.log(document.name);
+    });*/
+
+    db.collection('notes').find(details).toArray(function(err, results){
+    console.log(results); // output all records
+    res.send(results);
+   });
   });
 
   app.post('/notes', (req, res) => {
