@@ -7,11 +7,6 @@ module.exports = function(app, db) {
   app.get('/notes/:id', (req, res) => {
     const id = req.params.id;
     const details = { key: "Stratosphere" };
-
-    /*collection.findOne({_id: doc_id}, function(err, document) {
-      console.log(document.name);
-    });*/
-
     db.collection('notes').find(details).toArray(function(err, results){
     console.log(results); // output all records
     res.send(results);
