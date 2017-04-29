@@ -1,0 +1,27 @@
+{
+  "name": "earth_dictionary",
+  "version": "1.0.0",
+  "description": "Hackathon Project",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basimsahaf/SkyApps.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/basimsahaf/SkyApps/issues"
+  },
+  "homepage": "https://github.com/basimsahaf/SkyApps#readme",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongodb": "^2.2.26"
+  }
+}
