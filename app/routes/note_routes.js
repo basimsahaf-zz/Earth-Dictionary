@@ -21,7 +21,7 @@ module.exports = function(app, db) {
   // Function for POST /notes to create a new API endpoint
   app.post('/notes', (req, res) => {
     const note = { key:req.body.key, val:req.body.val,
-                   likes: 0, cont: req.body.cont,
+                   likes: 0, dislikes:0, cont: req.body.cont,
                    cat: req.body.cat, status: 0};
     db.collection('notes').insert(note, (err, result) => {
       if (err) {
@@ -52,8 +52,9 @@ module.exports = function(app, db) {
     const id = req.params.id;
     const details = { key: id };
     const note = { key:req.body.key, val:req.body.val,
-                   likes: req.body.likes, cont: req.body.cont,
-                   cat: req.body.cat, status: req.body.stat};
+                   likes: req.body.likes, dislikes: req.body.dislikes,
+                   cont: req.body.cont, cat: req.body.cat,
+                   status: req.body.stat};
     db.collection('notes').update(details, note, (err, result) => {
       if (err) {
           res.send({'error':'An error has occurred'});
