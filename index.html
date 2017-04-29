@@ -43,7 +43,11 @@
             <div class="form-group">
               <div class="col-xs-offset-2 col-xs-8">
                 <label class="hidden" for="defineTerm">Define</label>
-                <input id="defineTerm" name="defineTerm" type="text" placeholder="" class="form-control input-md awesomplete search-input" required data-list="dog, dogma, DO do, doggie, cat, catan, cathy, puppy, kitty, bunny">
+                
+                <div ng-controller="SearchCtrl">
+                <input ng-change="test()" ng-model="input" id="defineTerm" name="defineTerm" type="text" placeholder="" class="form-control input-md awesomplete search-input" required>
+				  </div>
+               
                 <label class="hidden" for="submit">Submit</label>
                 <button type="submit" id="submit" name="submit" class="btn btn-primary search-btn"> <i class="fa fa-search" aria-hidden="true"></i><span class="hidden">Search</span> </button>
               </div>
