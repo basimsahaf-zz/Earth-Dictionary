@@ -1,9 +1,9 @@
-// routes/note_routes.js
-
 var ObjectID = require('mongodb').ObjectID;
 
 module.exports = function(app, db) {
 
+  // Function for GET /notes/key requests to retrieve
+  // data from existing API endpoints
   app.get('/notes/:id', (req, res) => {
     const id = req.params.id;
     const details = { key: {$regex : `.*${id}.*`}};
@@ -14,14 +14,14 @@ module.exports = function(app, db) {
         ret.push(results[i]);
       }
     }
-    console.log(ret); // output all records
     res.send(ret);
    });
   });
 
+  // Function for POST /notes to create a new API endpoint
   app.post('/notes', (req, res) => {
     const note = { key:req.body.key, val:req.body.val,
-                   likes: req.body.likes, cont: req.body.cont,
+                   likes: 0, cont: req.body.cont,
                    cat: req.body.cat, status: 0};
     db.collection('notes').insert(note, (err, result) => {
       if (err) {
@@ -32,6 +32,8 @@ module.exports = function(app, db) {
     });
   });
 
+  // Function for DELETE /notes/key to delete an existing
+  // API endpoint
   app.delete('/notes/:id', (req, res) => {
     const id = req.params.id;
     const details = { key: query };
@@ -44,6 +46,8 @@ module.exports = function(app, db) {
     });
   });
 
+  // Function for PUT /notes/key to update the records
+  // of an existing API endpoint
   app.put('/notes/:id', (req, res) => {
     const id = req.params.id;
     const details = { key: id };
