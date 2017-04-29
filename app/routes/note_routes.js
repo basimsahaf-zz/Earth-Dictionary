@@ -6,11 +6,10 @@ module.exports = function(app, db) {
 
   app.get('/notes/:id', (req, res) => {
     const id = req.params.id;
-    const details = { key: id };
+    const details = { key: {$regex : `.*${id}.*`}};
     db.collection('notes').find(details).toArray(function(err, results){
       var ret = [];
     for(var i =0;i<results.length;i++) {
-      console.log(results[i]);
       if(results[i]["status"] == 1) {
         ret.push(results[i]);
       }
