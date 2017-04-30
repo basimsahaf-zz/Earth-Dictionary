@@ -36,16 +36,34 @@
       </div>
       <div class="inner cover"> 
         <!-- Do not edit above -- BEGIN CONTENT -->
-        
         <form class="form-horizontal">
           <fieldset>
-            <legend>Search Now</legend>
+            <legend>Add Definition</legend>
+            
             <div class="form-group">
               <div class="col-xs-offset-2 col-xs-8">
-                <label class="hidden" for="defineTerm">Define</label>
-                <input id="defineTerm" name="defineTerm" type="text" placeholder="" class="form-control input-md awesomplete search-input" required="" data-list="dog, dogma, DO do, doggie, cat, catan, cathy, puppy, kitty, bunny">
-                <label class="hidden" for="submit">Submit</label>
-                <button type="submit" id="submit" name="submit" class="btn btn-primary search-btn"> <i class="fa fa-search" aria-hidden="true"></i><span class="hidden">Search</span> </button>
+                <label class="hidden" for="defineTerm">Select Term/Abbreviaton</label>
+                <input id="defineTerm" name="defineTerm" type="text" placeholder="Term or Abbreviation" class="form-control input-md awesomplete add-input" required="" data-list="dog, dogma, DO do, doggie, cat, catan, cathy, puppy, kitty, bunny">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <div class="col-xs-offset-2 col-xs-8">
+                <label class="hidden" for="contributorName">Select Term/Abbreviaton</label>
+                <input id="contributorName" name="contributorName" type="text" placeholder="Your Name" class="form-control input-md awesomplete add-input" required="">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <div class="col-xs-offset-1 col-xs-10">
+                <label class="hidden" for="addDefinition">Select Term/Abbreviaton</label>
+				  <textarea id="addDefinition" name="addDefinition" type="text" rows="6" placeholder="Enter your definition here..." class="form-control textarea" required=""></textarea>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <div class="col-xs-offset-2 col-xs-8">
+                <button type="submit" id="addSubmission" name="addSubmission" class="btn btn-primary add-btn submitbutton"> Add to Dictionary </button>
               </div>
             </div>
           </fieldset>
@@ -59,7 +77,6 @@
     </div>
   </div>
 </div>
-
 
 <!-- Bootstrap core JavaScript
     ================================================== --> 
