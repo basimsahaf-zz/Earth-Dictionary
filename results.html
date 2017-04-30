@@ -24,7 +24,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
-<script src="code/js/scripts.js"></script>
 </head>
 
 <body>
@@ -55,10 +54,10 @@
         <div class="row">
           <div class="col-md-12">
             <div class="results-content">
-              <h2>Term</h2>
+              <h2 class="search-term"></h2>
               <ol>
                 <!-- Parse JSON Result -->
-				  <li><span><label id="Submission">dfsd sdfgsdfg sdfgsdfgsdfhs</label></span></li>
+				  <li><span><label id="definition"></label></span></li>
                 <!-- End Parse JSON Result --> 
                 <!-- Like Buttons -->
                 <ul class="nav nav-pills">
@@ -74,7 +73,7 @@
             <button type="submit" id="addSubmission" name="addSubmission" class="btn btn-primary add-btn"> <i class="fa fa-search" aria-hidden="true"></i> Add Definition </button>
           </div>
         </div>
-        
+        <script src="code/js/results.js"></script>
         <!-- Do not edit below -- END CONTENT --> 
       </div>
       <div ng-controller="FooterCtrl">
