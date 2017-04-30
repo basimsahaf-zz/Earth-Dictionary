@@ -14,6 +14,7 @@ module.exports = function(app, db) {
         ret.push(results[i]);
       }
     }
+    res.header('Access-Control-Allow-Origin', '*');
     res.send(ret);
    });
   });
@@ -30,6 +31,7 @@ module.exports = function(app, db) {
         ret.push(results[i]);
       }
     }
+    res.header('Access-Control-Allow-Origin', '*');
     res.send(ret);
    });
   });
@@ -41,8 +43,10 @@ module.exports = function(app, db) {
                    cat: req.body.cat, status: 1};
     db.collection('notes').insert(note, (err, result) => {
       if (err) {
+        res.header('Access-Control-Allow-Origin', '*');
         res.send({ 'error': 'An error has occurred' });
       } else {
+        res.header('Access-Control-Allow-Origin', '*');
         res.send(result.ops[0]);
       }
     });
@@ -55,8 +59,10 @@ module.exports = function(app, db) {
     const details = { key: query };
     db.collection('notes').remove(details, (err, item) => {
       if (err) {
+        res.header('Access-Control-Allow-Origin', '*');
         res.send({'error':'An error has occurred'});
       } else {
+        res.header('Access-Control-Allow-Origin', '*');
         res.send('Note ' + id + ' deleted!');
       }
     });
@@ -73,8 +79,10 @@ module.exports = function(app, db) {
                    status: req.body.stat};
     db.collection('notes').update(details, note, (err, result) => {
       if (err) {
+        res.header('Access-Control-Allow-Origin', '*');
           res.send({'error':'An error has occurred'});
       } else {
+        res.header('Access-Control-Allow-Origin', '*');
           res.send(note);
       }
     });
