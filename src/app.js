@@ -17,7 +17,7 @@ export default class App extends Component {
     this.setState({
       loading: true
     });
-
+    //temporary data fecthing using github API. Can be later changed to our earth-dict API.
     fetch('https://api.github.com/search/repositories?q=topic:ruby+topic:rails')
     .then(res => res.json())
     .then(data => {
@@ -52,7 +52,7 @@ export default class App extends Component {
         <div className="app__content">
           <div className="content__search content__search--with-full_name">
             <div className="search__info">
-              <h4>Search</h4>
+              <h4>Search here</h4>
             </div>
             <div className="search__component">
               <Search

@@ -21,10 +21,10 @@
     "react-search-box": "0.0.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
+    "start": "earth-dictionary start",
+    "build": "earth-dictionary build",
+    "test": "earth-dictionary test --env=jsdom",
+    "eject": "earth-dictionary eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   }
