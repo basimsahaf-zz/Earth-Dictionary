@@ -59,3 +59,4 @@ typings/
 node_modules/
 node-postgres-promises/
 earthdictionary/
+earthdictonary/node-postgres-promises/
