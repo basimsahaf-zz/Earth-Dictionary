@@ -1,0 +1,19 @@
+{
+  "name": "earth-dictionary",
+  "version": "1.0.0",
+  "description": "A Hub for Earth related terms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basimsahaf/Earth-Dictionary.git"
+  },
+  "author": "Brijendra Nag & Basim Sultan Sahaf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/basimsahaf/Earth-Dictionary/issues"
+  },
+  "homepage": "https://github.com/basimsahaf/Earth-Dictionary#readme"
+}
