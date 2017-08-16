@@ -15,5 +15,17 @@
   "bugs": {
     "url": "https://github.com/basimsahaf/Earth-Dictionary/issues"
   },
-  "homepage": "https://github.com/basimsahaf/Earth-Dictionary#readme"
+  "homepage": "https://github.com/basimsahaf/Earth-Dictionary#readme",
+  "dependencies": {
+    "react-fontawesome": "^1.6.1",
+    "react-search-box": "0.0.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
 }
